@@ -1,0 +1,13 @@
+# SCA Scanner Configuration
+# Repository list and scan parameters for Java repositories.
+
+global_cfg:
+  schedule_hours: 24
+  jdk_home: ""  # optional — defaults to JAVA_HOME or first JDK on PATH
+
+repositories:
+  - name: "opentelemetry-private"
+    url: "git@github.com:michasks/opentelemetry-java.git"
+    branch: "main"
+    local_path: "/data/repos/java-internal-api"
+    schedule_hours: 12  # more active repo — scan twice daily

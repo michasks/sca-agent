@@ -1,0 +1,35 @@
+[project]
+name = "sca-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Viktor", email = "michasks@mail.ru" }
+]
+requires-python = ">=3.9"
+dependencies = [
+    "gigachat>=0.2.3",
+    "langchain>=0.3.30",
+    "langchain-community>=0.3.31",
+    "langchain-openai>=0.3.35",
+    "langchain-postgres>=0.0.17",
+    "pyyaml>=6.0",
+    "gitpython>=3.1.40",
+    "dulwich>=0.24.10",
+    "fastapi[standart]>=0.128.8",
+]
+
+[dependency-groups]
+dev = [
+    "datamodel-code-generator>=0.45.0",
+    "pytest>=7.0",
+]
+
+[project.scripts]
+sca-agent = "main:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv.scripts]
